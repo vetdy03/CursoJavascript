@@ -1,9 +1,14 @@
 //string o cadenas de texto
-const producto = "monitor e 20 pulgada\"";
+const producto = "monitor e 20 pulgada\" porque es el mejor"; //comillas dobles
 const producto2 = String("monitor e 50 pulgadas");
-const producto3 = new String("monitor e 60 pulgadas");
 
-console.log(producto);
+//length
+console.log(producto.length);
 console.log(producto2);
-console.log(typeof producto3);
 
+//indexof
+console.log(producto.indexOf("monitore")); //si no lo encuentra devuelve -1
+
+//includes (ES6)
+console.log(producto.includes("pulgada")); //devuelve true o false
+console.log(producto.includes("tablet")); //devuelve true o false
