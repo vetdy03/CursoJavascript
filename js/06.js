@@ -9,7 +9,7 @@ let res7 = Math.pow(2,3); // potencia
 let res8 = Math.min(3,5,1,7,2); // minimo
 let res9 = Math.max(3,5,1,7,2); // maximo
 let res10 = Math.random(); // numero aleatorio entre 0 y 1  
-
+let res11 = Math.floor(Math.random() * 100) + 1; // numero aleatorio entre 1 y 100
 console.log(res);
 console.log(res2);
 console.log(res3);
@@ -19,7 +19,6 @@ console.log(res6);
 console.log(res7);
 console.log(res8);
 console.log(res9);
-console.log(res10); 
-
-
-
+console.log(res10);
+console.log(res11); 
+   
