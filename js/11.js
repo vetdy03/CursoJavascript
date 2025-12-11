@@ -4,4 +4,15 @@ const producto = {
     disponible: true,
 }
 
-const precio = producto.precio;
+//forma anterior
+// const precio = producto.precio;
+// const nombre = producto.nombre;
+
+// console.log(precio);
+// console.log(nombre);
+
+//Destructuring
+const {precio, nombre} = producto;
+
+console.log(precio);
+console.log(nombre);
