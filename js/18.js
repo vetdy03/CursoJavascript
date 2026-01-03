@@ -1,13 +1,14 @@
-const num1 = 20;
-const num2 = "20";
 
-console.log( num1 == num2 ); //compara solo el valor
-console.log( num1 === num2 ); //compara valor y tipo
-newNum= parseInt(num2); //convierte el string a entero y luego compara
-console.log(newNum);
-console.log( num1 === newNum ); //compara valor y tipo
+function sumar( num1 = 0, num2 = 0){ //funcion con parametros
+    console.log(num1 + num2);
+}
+sumar(2, 2);
+sumar(10, 20);
+sumar(30, 40);  
+sumar(50);
 
-//metodos para strings  
-console.log( typeof num1.toString() ); //convierte un numero a string
-newNunToString = num1.toString();
-console.log( newNunToString );
+//expresion de la funcion
+const sumar2 = function(num1 = 0, num2 = 0){
+    console.log(num1 + num2);
+}
+sumar2(3, 3);
