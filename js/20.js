@@ -1,14 +1,23 @@
-
-function sumar( num1 = 0, num2 = 0){ //funcion con parametros
-    console.log(num1 + num2);
+//metodos de propiedades y cadenas de texto
+const reproductor = {
+    reproducir : function(id){
+        console.log("reproduciendo cancion con ID.. " + id);
+    },
+    pausar : function(){
+        console.log("pausando cancion");
+    
+    },
+    borrar : function(id){
+        console.log("borrando cancion... " + id);
+    }
 }
-sumar(2, 2);
-sumar(100, 200);
-sumar(300, 400);  
-sumar(500);
 
-//expresion de la funcion
-const sumar2 = function(num1 = 5, num2 = 5){
-    console.log(num1 + num2);
+reproductor.crearPlaylist = function(id){
+    console.log("creando playlist " + id);  
 }
-sumar2(3, 8);
+
+//llamando al metodo
+reproductor.reproducir(70);
+reproductor.pausar();
+reproductor.borrar(20);
+reproductor.crearPlaylist("musica 1");
