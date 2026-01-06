@@ -1,14 +1,27 @@
 
-function sumar( num1 = 0, num2 = 0){ //funcion con parametros
-    console.log(num1 + num2);
+function sumar( n1, n2){ //funcion con parametros
+    return n1 + n2;
 }
-sumar(2, 2);
-sumar(10, 20);
-sumar(30, 40);  
-sumar(50);
+const res = sumar(9, 3);
+console.log(res);
 
-//expresion de la funcion
-const sumar2 = function(num1 = 0, num2 = 0){
-    console.log(num1 + num2);
+let total = 0;
+function agregarCarrito(precio){
+    return total += precio;
 }
-sumar2(3, 3);
+
+
+function calcularImpuesto(total){
+    return total * 1.15;
+}
+//validar formulario 
+
+total = agregarCarrito(200);
+total = agregarCarrito(300);
+total = agregarCarrito(400);
+
+console.log(total);
+
+const totalPagar = calcularImpuesto(total);
+console.log('total a pagar con impuesto es: ' + totalPagar);
+console.log(`total a pagar con impuesto es: ${totalPagar}`);
