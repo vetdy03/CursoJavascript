@@ -9,6 +9,9 @@ const reproductor = {
     },
     borrar : function(id){
         console.log("borrando cancion... " + id);
+    },
+    reproducirPlayList : function(nombre){
+        console.log("reproduciendo playlist " + nombre);  
     }
 }
 
@@ -20,4 +23,5 @@ reproductor.crearPlaylist = function(id){
 reproductor.reproducir(70);
 reproductor.pausar();
 reproductor.borrar(20);
-reproductor.crearPlaylist("musica 1");
+reproductor.crearPlaylist("musica 1 a");
+reproductor.reproducirPlayList("musica 30");
