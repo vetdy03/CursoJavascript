@@ -24,4 +24,5 @@ reproductor.reproducir(70);
 reproductor.pausar();
 reproductor.borrar(20);
 reproductor.crearPlaylist("musica 1 a");
-reproductor.reproducirPlayList("musica 30");
+
+reproductor.reproducirPlayList("musica 3000");
