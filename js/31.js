@@ -1,3 +1,4 @@
+//NOTIFICACION 
 const boton = document.querySelector('#botonParaVerNotifcacion') 
 boton.addEventListener('click', () => {
     Notification.requestPermission()
