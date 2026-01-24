@@ -1,0 +1,29 @@
+{
+    "empleados": [
+        {
+            "id":1,
+            "nombre": "vetdy03",
+            "puesto": "Dev"
+        },
+        {
+            "id":2,
+            "nombre": "danny wow",
+            "puesto": "UX/UI"
+        },
+        {
+            "id":3,
+            "nombre": "bi",
+            "puesto": "TI"
+        },
+        {
+            "id":4,
+            "nombre": "clexo",
+            "puesto": "Dev"
+        },
+        {
+            "id":5,
+            "nombre": "mary",
+            "puesto": "Servidores"
+        }
+    ]
+}

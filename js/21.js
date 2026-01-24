@@ -34,7 +34,7 @@ const aprendiendo = (tecnologia) => console.log(`Aprendiendo ${tecnologia}`);
 
 aprendiendo('JavaScript XD');
 
-
+const respuesta = respuesta =>  respuesta.json()
 
 //foreach
 meses.forEach( mes => {

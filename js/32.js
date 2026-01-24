@@ -39,6 +39,18 @@ app();
 function mostrarClientes( clientes){
     console.log(clientes+' Mostrar en pantalla');
 }
+
+
+
+
+
+
+
+
+
+
+
+
 // setInterval( function(){
 //     console.log('set timeout..') 
 // }, 3000); 
