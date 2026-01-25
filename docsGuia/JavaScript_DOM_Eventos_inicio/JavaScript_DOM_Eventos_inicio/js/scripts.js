@@ -35,7 +35,26 @@ console.log(nuevoEnlace);
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 
-//getelementbyclassname
+//eventos
+console.log(1);
+window.addEventListener('load', function(){
+    console.log(2);
+});// esto es para que cargue todo, imagenes, scripts, css etc
+window.onload = function(){
+    console.log(3);
+}
+window.addEventListener('DOMContentLoaded', function(){ //solo espera que se cargue el html
+    console.log(17);
+})
+console.log(5);
+
+
+window.onscroll = function(){
+    console.log('scrolling...');
+}
+
+
+
 
 
 //selecionar una clase con .
