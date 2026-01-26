@@ -46,14 +46,24 @@ window.onload = function(){
 window.addEventListener('DOMContentLoaded', function(){ //solo espera que se cargue el html
     console.log(17);
 })
-console.log(5);
+console.log(55);
 
 
 window.onscroll = function(){
     console.log('scrolling...');
 }
 
-
+//seleccionar elementos y asociarlos un evento
+const btnEnviar = document.querySelector('.boton--primario');
+btnEnviar.addEventListener('click', function(evento){//  como le pasa el evento se lo recibe como parametro
+    console.log(evento); //muestra todo el evento
+    evento.preventDefault(); //previene la accion por defecto del evento
+    
+    
+    
+    
+    console.log('enviando formulario');
+});
 
 
 
