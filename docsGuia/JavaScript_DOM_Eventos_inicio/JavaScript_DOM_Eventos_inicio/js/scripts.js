@@ -89,18 +89,51 @@ formulario.addEventListener('submit', function(e){
 
     //VALIDAR EL FORMULARIO
 
+    const {nombre, email, mensaje} = datos;
+    if(nombre === '' || email === '' || mensaje === ''){
+        mostrarError('Todos los campos son obligatorios');
+        return; //corta la ejecucion del codigo
+    }
+    if(nombre !== '' && email !== '' && mensaje !== ''){
+        mostrarEnvioExitoso('Formulario enviado correctamente');
+        return; //corta la ejecucion del codigo
+    }
     //ENVIAR FORMULARIO
-    
+    console.log('enviando formulario...');
 });
 
 function leerText(e){
     // console.log(e.target.value);// para obtener el valor del input
     // console.log(e.target); // para obtener el elemento del input
     datos[e.target.id] = e.target.value; //llenar el objeto con los datos
-    console.log(datos);
+    // console.log(datos);
 }
 
+//mostrar unnerror en pantalla
+function mostrarError(mensaje){
+    const error = document.createElement('P');
+    // console.log(typeof error);
+    error.classList.add('error');//agregar la clase error al parrafo
+    error.textContent = mensaje; //agregar el mensaje de error
+    formulario.appendChild(error);//agregar el error al formulario en el html
+    //elimnar el error despues de 5 segundos
+    setTimeout(() =>{
+        error.remove();
+    }, 3000);
+}
 
+//mostrar un envio exitoso en pantalla
+function mostrarEnvioExitoso(mensaje){
+    const mensajeExitoso = document.createElement('P');
+    // console.log(typeof error);
+    mensajeExitoso.classList.add('mensajeExitoso');//agregar la clase error al parrafo
+    mensajeExitoso.textContent = mensaje; //agregar el mensaje de exito
+    formulario.appendChild(mensajeExitoso);//agregar el mensaje de exito al formulario en el html
+    //elimnar el error despues de 5 segundos
+    setTimeout(() =>{
+        mensajeExitoso.remove();
+    }, 3000);
+}
 
 
 
