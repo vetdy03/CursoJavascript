@@ -36,22 +36,22 @@ const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 
 //eventos
-console.log(1);
-window.addEventListener('load', function(){
-    console.log(2);
-});// esto es para que cargue todo, imagenes, scripts, css etc
-window.onload = function(){
-    console.log(3);
-}
-window.addEventListener('DOMContentLoaded', function(){ //solo espera que se cargue el html
-    console.log(17);
-})
-console.log(55);
+// console.log(1);
+// window.addEventListener('load', function(){
+//     console.log(2);
+// });// esto es para que cargue todo, imagenes, scripts, css etc
+// window.onload = function(){
+//     console.log(3);
+// }
+// window.addEventListener('DOMContentLoaded', function(){ //solo espera que se cargue el html
+//     console.log(17);
+// })
+// console.log(55);
 
 
-window.onscroll = function(){
-    console.log('scrolling...');
-}
+// window.onscroll = function(){
+//     console.log('scrolling...');
+// }
 
 //seleccionar elementos y asociarlos un evento
 const btnEnviar = document.querySelector('.boton--primario');
@@ -65,8 +65,30 @@ btnEnviar.addEventListener('click', function(evento){//  como le pasa el evento 
     console.log('enviando formulario');
 });
 
+//eventos de los inputs y textarea, como es id usamos #
 
+const datos = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+}
+const nombre = document.querySelector('#nombre');
+console.log(nombre);
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
 
+nombre.addEventListener('input', leerText);// console.log(eventito);
+email.addEventListener('input', leerText);
+mensaje.addEventListener('input', leerText);
+
+function leerText(e){
+    // console.log(e.target.value);// para obtener el valor del input
+    // console.log(e.target); // para obtener el elemento del input
+    datos[e.target.id] = e.target.value;
+    console.log(datos);
+}
+
+ 
 //selecionar una clase con .
 //por id con una numeral #
 // si te equivocas en el nombre del selecto js te dira null en la consola 
