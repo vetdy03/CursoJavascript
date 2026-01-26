@@ -27,9 +27,9 @@ nuevoEnlace.href = 'nuevo-enlace.html';
 //add el text
 nuevoEnlace.textContent = 'Nuevo enlace';
 //agregar la clase
-nuevoEnlace.classList.add('navegacion__enlace');
+// nuevoEnlace.classList.add('navegacion__enlace');
 
-console.log(nuevoEnlace);
+// console.log(nuevoEnlace);
 
 //add to document
 const navegacion = document.querySelector('.navegacion');
@@ -54,16 +54,18 @@ navegacion.appendChild(nuevoEnlace);
 // }
 
 //seleccionar elementos y asociarlos un evento
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click', function(evento){//  como le pasa el evento se lo recibe como parametro
-    console.log(evento); //muestra todo el evento
-    evento.preventDefault(); //previene la accion por defecto del evento
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click', function(evento){//  como le pasa el evento se lo recibe como parametro
+//     console.log(evento); //muestra todo el evento
+//     evento.preventDefault(); //previene la accion por defecto del evento
     
     
     
     
-    console.log('enviando formulario');
-});
+//     console.log('enviando formulario');
+// });
+
+
 
 //eventos de los inputs y textarea, como es id usamos #
 
@@ -73,20 +75,47 @@ const datos = {
     mensaje: ''
 }
 const nombre = document.querySelector('#nombre');
-console.log(nombre);
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerText);// console.log(eventito);
 email.addEventListener('input', leerText);
 mensaje.addEventListener('input', leerText);
 
+//EL EVENTO DE SUBMIT 
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();//previene la accion por defecto del evento y evita que se recargue la pagina
+
+    //VALIDAR EL FORMULARIO
+
+    //ENVIAR FORMULARIO
+    
+});
+
 function leerText(e){
     // console.log(e.target.value);// para obtener el valor del input
     // console.log(e.target); // para obtener el elemento del input
-    datos[e.target.id] = e.target.value;
+    datos[e.target.id] = e.target.value; //llenar el objeto con los datos
     console.log(datos);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 //selecionar una clase con .
