@@ -236,13 +236,18 @@ img {
     text-transform: uppercase;
     border-radius: .5rem;
 }
-.mensajeExitoso{
+.exitoso{
     background-color: rgb(74, 185, 0);
     text-align: center;
     padding: 1rem;
     color:var(--blanco);
     text-transform: uppercase;
     border-radius: .5rem;
+}
+.alerta-flotante {
+    position: absolute;
+    /* padding: 15px 20px; */
+    border-radius: 5px;
 }
 .correcto {
     background-color: rgb(74, 185, 0);
@@ -263,7 +268,9 @@ img {
     margin: -5rem auto 0 auto;
     width: 95%;
     padding: 5rem;
+    position: relative; /* Necesario para que el absolute sea relativo a esto */
 }
+
 .campo {
     display: flex;
     margin-bottom: 2rem;

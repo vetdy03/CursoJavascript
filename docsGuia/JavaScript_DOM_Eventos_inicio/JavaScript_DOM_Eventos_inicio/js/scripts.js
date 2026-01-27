@@ -91,24 +91,31 @@ formulario.addEventListener('submit', function(e){
 
     const {nombre, email, mensaje} = datos;
     if(nombre === '' || email === '' || mensaje === ''){
-        mostrarError('Todos los campos son obligatorios');
+        mostrarAlerta('Todos los campos son obligatorios', alerta = false);
         return; //corta la ejecucion del codigo
     }
     
     //ENVIAR FORMULARIO
-    mostrarEnvioExitoso('Formulario enviado correctamente');
+    mostrarAlerta('Formulario enviado correctamente', alerta = true);
 });
 
-function leerText(e){
-    // console.log(e.target.value);// para obtener el valor del input
-    // console.log(e.target); // para obtener el elemento del input
-    datos[e.target.id] = e.target.value; //llenar el objeto con los datos
-    // console.log(datos);
-}
+
 //refatoring
-function mostrarAlerta{
-    
+function mostrarAlerta(mensaje, alerta){
+    const alert = document.createElement('P');
+    alert.textContent = mensaje; //agregar el mensaje de error
+    if(!alerta){
+        alert.classList.add('error', 'alerta-flotante');//agregar la clase error al parrafo
+    }else{
+        alert.classList.add('exitoso', 'alerta-flotante');//agregar la clase exito al parrafo
+    }
+    formulario.appendChild(alert);//agregar el error al formulario en el html
+    //eliminar el mensaje de error luego de 3 segundillos
+    setTimeout(() =>{
+        alert.remove();
+    }, 3000);
 }
+//CODIGO REFACTORIZADO
 //mostrar unnerror en pantalla
 function mostrarError(mensaje){
     const error = document.createElement('P');
@@ -134,8 +141,13 @@ function mostrarEnvioExitoso(mensaje){
         mensajeExitoso.remove();
     }, 3000);
 }
-
-
+//FIN REFACTORIZADO
+function leerText(e){
+    // console.log(e.target.value);// para obtener el valor del input
+    // console.log(e.target); // para obtener el elemento del input
+    datos[e.target.id] = e.target.value; //llenar el objeto con los datos
+    // console.log(datos);
+}
 
 
 
